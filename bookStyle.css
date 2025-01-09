@@ -1,0 +1,278 @@
+.navBarContainer{
+    display: flex;
+    justify-content: space-between;
+    height:  50px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.navBar{
+    background-color: #36454F;
+    height:80px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+#navLogo img{
+    width: 20px;
+    height: 20px;
+}
+
+#navLogo{
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    padding-top: 5px;
+    
+}
+
+#navigation li{
+    display: flex;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1em;
+    /* margin-left: 50px; */
+}
+
+#navigation{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+#navigation a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+
+}
+#navigation a:hover{
+   text-decoration: underline;
+}
+
+/* two columns */
+.rows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .books {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    margin-top:100px;
+    /* padding: 50px 0; */
+  }
+
+ .books img{
+    /* display: flex;
+    justify-content: space-between; */
+    float: left;
+    height: 250px;
+    width: 200px;
+    margin:0 10px;
+}
+
+.pay{
+    cursor: pointer;
+}
+
+#PaymentTitle{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    margin-top:120px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+#subPaymentTitle{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+#paymentFailed{
+    color: red;
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  }
+.paymentContainer{
+    background-color: rgb(193, 193, 193);
+    width: 550px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment img{
+    width: 350px;
+}
+#successTitle{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    margin-top:120px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.success {
+    background-color: rgb(193, 193, 193);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  }
+  .success img{
+    width: 400px;
+}
+ #card{
+    margin-top: 10px;
+}
+#formResponse{
+    font-size: 16px;
+}
+
+#cardNum    
+ {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 20px;
+}
+
+#expMonth,
+#expYear {
+    margin-top: 20px;
+    margin-left: 9px;
+    height: 25px;
+    width: 80px;
+    cursor: pointer;
+}
+
+#securityCode{
+    margin-top: 20px;
+    margin-left: 19px;
+    width: 50px;
+}
+#continueBtn{
+    background-color: #af4c4c; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-left: 100px;
+}
+
+
+@media screen and (max-width: 990px){ /*mobile view*/
+    #navigation {
+        display: grid;
+        grid-template-columns:auto;
+        margin: 0;
+        width: 75vw;
+        position: absolute;
+        top: -999px;
+        opacity: 0; 
+        z-index: -1;
+        height: 35vh;
+    }
+/* 
+    #navigation li{
+        padding-right:50px;
+    } */
+
+     /* active is a class to be called in the javascript to see if the click is present*/
+     #navigation.active {
+        background-color: #4c5962;
+        top: 100%;
+        opacity: 1;
+        z-index: 99;
+        height: 30vh;
+        font-size: 1.2rem; 
+    }
+
+    .bar{ 
+        display: block;
+        cursor: pointer;
+        width: 25px;
+        height: 4px;
+        margin: 5px auto;
+        transition: 0.3s;
+        background-color: white;
+    }
+
+    #mobileNav{
+        position: absolute;
+        top:20%;
+        right:10%;
+    }
+
+    #navigation a{
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+        display: table;
+
+    }
+    
+
+    /* to turn the bar into an 'X' */
+    /* is-active is a class to be called in the javascript */
+    #mobileNav.active .bar:nth-child(1){
+        transform: translateY(10px) rotate(55deg);
+    }
+
+    #mobileNav.active .bar:nth-child(2){ 
+        opacity: 0;
+    }
+
+    #mobileNav.active .bar:nth-child(3){
+        transform: translateY(-10px) rotate(-55deg);
+    }
+
+    /* single column */
+      .books { 
+        display: flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+        flex-direction: column;
+        flex-basis: 100%;
+        margin-top: 60px;
+      }
+    
+     .books img{
+        float: left;
+        height: 300px;
+        width: 230px;
+        margin:15px;
+        
+    }
+    .books p{
+        font-size: 15px;
+    }
+    
+}
+
+

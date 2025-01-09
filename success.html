@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssFolder/bookStyle.css">
+    <title>Success Website</title>
+</head>
+<body>
+         <!-- Navigation Section-->
+  <nav class="navBar"> 
+    <div class="navBarContainer">
+        <a href="index.html" id="navLogo">
+            <img src="imageFolder/bookLogo.png" alt="BookLogo">
+            My Bookshop</a>
+
+            <!--to create the navigation toggle to open up the navigation links -->
+         <div class="toggleBar" id="mobileNav"> 
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- the navigation links -->
+        <ul id="navigation"> 
+            <li>
+                <a href="index.html"> Home </a>
+            </li>
+            <li>
+                <a href="#"> About Us </a>
+            </li>
+            <li>
+                <a href="#"> Contact Us </a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+
+   <!-- Payment Section -->
+   <h2 id="successTitle">You have successfully entered your credit card details</h2>
+   <hr>
+   <div class="success">
+   <div id="subSuccessTitle">
+   <h3>Debit/Credit Card</h3> 
+   <img src="imageFolder/cardLogos.png"  alt="card logos" >
+   </div>
+
+  <div id="formResponse">
+    <p>Your credit card number ends in: </p>
+    <p id="card">card num placeholder</p>
+  </div>
+  </div>
+
+    <script src="jsFolder/success.js"></script>
+</body>
+</html>

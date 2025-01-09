@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssFolder/bookStyle.css">
+    <title>Pay Website</title>
+</head>
+<body>
+     <!-- Navigation Section-->
+  <nav class="navBar"> 
+    <div class="navBarContainer">
+        <a href="index.html" id="navLogo">
+            <img src="imageFolder/bookLogo.png" alt="BookLogo">
+            My Bookshop</a>
+
+            <!--to create the navigation toggle to open up the navigation links -->
+         <div class="toggleBar" id="mobileNav"> 
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- the navigation links -->
+        <ul id="navigation"> 
+            <li>
+                <a href="index.html"> Home </a>
+            </li>
+            <li>
+                <a href="#"> About Us </a>
+            </li>
+            <li>
+                <a href="#"> Contact Us </a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+
+   <!-- Payment Section -->
+    <h2 id="PaymentTitle">Payment Options</h2>
+    <hr>
+    <div class="payment">
+    <div id="subPaymentTitle">
+    <h3>Debit/Credit Card</h3> 
+    <img src="imageFolder/cardLogos.png"  alt="card logos" >
+    </div>
+    <div id="formResponse"></div>
+    <p id="paymentFailed"></p>
+     <div class="paymentContainer">
+        <form>
+            <label>Card Number</label>
+            <input type="text" id="cardNum" placeholder="0123456789012345">
+            <br>
+            <label>Expiration Date</label>
+            <select id="expMonth" required>
+                <option value="" disabled selected>Month</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select id="expYear" required>
+                <option value="" disabled selected>Year</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                <option value="2033">2033</option>
+                <option value="2034">2034</option>
+                <option value="2035">2035</option>
+            </select>
+            <br>
+            <label>Security Code</label>
+            <input type="text" id="securityCode" placeholder="CVV">
+            
+            <p>(3-4 digit code normally on the back of your card.)</p>
+
+            <a href="success.html">
+            <input type="submit" id="continueBtn" value="Continue"/>
+            </a>
+        </form>
+     </div>
+   </div>
+
+
+    <script src="jsFolder/payment.js"></script>
+</body>
+</html>
